@@ -36,7 +36,7 @@ public class CategoriaGastosService {
                 .toList();
     }
 
-    public CategoriaResponseDto buscarPorId(Long id) {
+    public CategoriaResponseDto buscarId(Long id) {
         CategoriaGastosEntity entity = categoriaGastosRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Categoria não encontrada"));
 

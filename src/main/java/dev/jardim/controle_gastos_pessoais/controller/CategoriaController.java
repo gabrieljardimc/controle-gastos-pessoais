@@ -32,6 +32,6 @@ public class CategoriaController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public CategoriaResponseDto buscarId(@PathVariable Long id) {
-        return categoriaGastosService.buscarPorId(id);
+        return categoriaGastosService.buscarId(id);
     }
 }
