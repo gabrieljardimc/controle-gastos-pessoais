@@ -3,6 +3,7 @@ package dev.jardim.controle_gastos_pessoais.database.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -17,8 +18,11 @@ public class GastosEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String descricao;
-    private String valor;
+    @Column(nullable = false)
+    private BigDecimal valor;
+    @Column(nullable = false)
     private LocalDate data;
 
     @ManyToOne
